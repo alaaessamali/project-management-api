@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ProjectManagement.Domain.Enums;
+using TaskStatus = ProjectManagement.Domain.Enums.TaskStatus;
 namespace ProjectManagement.Domain.Entities
 {
     public class TaskItem
@@ -14,7 +15,8 @@ namespace ProjectManagement.Domain.Entities
 
         public string Description { get; set; } = string.Empty;
 
-        public string Status { get; set; } = "ToDo";
+
+        public TaskStatus Status { get; set; } = TaskStatus.ToDo;
 
         public DateTime DueDate { get; set; }
 

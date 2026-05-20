@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using TaskStatus = ProjectManagement.Domain.Enums.TaskStatus;
 using Microsoft.EntityFrameworkCore;
 
 namespace ProjectManagement.Infrastructure.Services
@@ -44,7 +44,7 @@ namespace ProjectManagement.Infrastructure.Services
                 .ToListAsync();
         }
 
-        public async Task<bool> UpdateStatusAsync(int id, string status)
+        public async Task<bool> UpdateStatusAsync(int id, TaskStatus status)
         {
             var task = await _context.Tasks.FindAsync(id);
 

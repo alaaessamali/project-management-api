@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using TaskStatus = ProjectManagement.Domain.Enums.TaskStatus;
 
 namespace ProjectManagement.Application.Interfaces
 {
@@ -14,7 +14,7 @@ namespace ProjectManagement.Application.Interfaces
 
         Task<List<TaskItem>> GetByProjectIdAsync(int projectId);
 
-        Task<bool> UpdateStatusAsync(int id, string status);
+        Task<bool> UpdateStatusAsync(int id, TaskStatus status);
 
         Task<bool> DeleteAsync(int id);
     }

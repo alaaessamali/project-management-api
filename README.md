@@ -1,5 +1,4 @@
 # Project & Task Management API
-
 A scalable backend API built using ASP.NET Core Web API following Clean Architecture principles.
 The system allows authenticated users to manage projects and tasks efficiently using secure JWT authentication.
 

@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
+using ProjectManagement.Application.Interfaces;
 using ProjectManagement.Infrastructure.Data;
+using ProjectManagement.Infrastructure.Services;
 
 namespace ProjectManagement.API
 {
@@ -19,7 +21,8 @@ namespace ProjectManagement.API
             builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")));
-
+            builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<JwtService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

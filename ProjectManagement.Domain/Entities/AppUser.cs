@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProjectManagement.Domain.Entities
 {
-    internal class AppUser
+   
+
+    public class AppUser
     {
+        public Guid Id { get; set; }
+
+        public string UserName { get; set; } = string.Empty;
+
+        public string Email { get; set; } = string.Empty;
+
+        public string PasswordHash { get; set; } = string.Empty;
+
+        
+        public ICollection<Project> Projects { get; set; } = new List<Project>();
     }
 }

@@ -21,6 +21,7 @@ Application=>	DTOs, Interfaces
 Domain=>	Entities, Enums
 Infrastructure=>	DbContext, Services
 
+
 🔐 Authentication
 JWT Authentication is implemented with:
 User Registration
